@@ -9,10 +9,12 @@ var LibraryEntryView = Backbone.View.extend({
     'click': function() {
       this.model.play();      
       this.model.enqueue(); //CHECK THIS LINE BETTER
+      // this.render();
     }
   },
 
   render: function(){
+    console.log('render');
     return this.$el.html(this.template(this.model.attributes));
   }
 
