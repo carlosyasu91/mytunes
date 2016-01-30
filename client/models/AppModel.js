@@ -22,9 +22,6 @@ var AppModel = Backbone.Model.extend({
       this.get('songQueue').push(song);
       console.dir(this.get('songQueue').push);
     }, this);
-    params.library.on('ended', function(){
-      this.get('songQueue').shift();
-    });
   }
 
 });

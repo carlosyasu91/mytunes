@@ -17,7 +17,7 @@ var SongQueue = Songs.extend({
       this.remove();
     }, this);
     this.on('enqueue', function(song) {
-      console.log('enqueueing');
+      // console.log('enqueueing');
       this.push(song);
     }, this);
   },
@@ -25,7 +25,6 @@ var SongQueue = Songs.extend({
   playFirst: function(){
     //access appView.playerView.model and set it equal to the next song
     this.at(0).play();
-    this.trigger('play');
   }
 
 

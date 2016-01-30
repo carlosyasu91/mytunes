@@ -44,12 +44,15 @@ describe('PlayerView', function() {
       // play the first song
       songQueue.playFirst();
       expect(appView.playerView.model).to.equal(firstSong);
+      console.log('first');
       // Simulate the end of the first song
       $(appView.playerView.el).trigger('ended');
       expect(appView.playerView.model).to.equal(secondSong);
+      console.log('second');
       // Simulate the end of the second song
       $(appView.playerView.el).trigger('ended');
       expect(appView.playerView.model).to.equal(thirdSong);
+      console.log('third');
     });
   });
 
